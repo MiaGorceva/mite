@@ -2,7 +2,7 @@
 #The original can be found in archived file with the name .htaccess__[HASH]
 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^mite.is
+RewriteCond %{HTTP_HOST} mite.is
 RewriteRule (.*) https://mite.club/$1 [R=301,L]
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
