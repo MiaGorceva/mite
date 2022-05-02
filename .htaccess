@@ -1,13 +1,16 @@
 #This Apache config file was created by Duplicator Installer on 2022-04-20 11:21:57.
 #The original can be found in archived file with the name .htaccess__[HASH]
 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^mite.is
+RewriteRule (.*) https://mite.club/$1 [R=301,L]
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /miote/
+RewriteBase /mite/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /miote/index.php [L]
+RewriteRule . /mite/index.php [L]
 </IfModule>
 # END WordPress
