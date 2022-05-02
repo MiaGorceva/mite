@@ -1,9 +1,6 @@
 #This Apache config file was created by Duplicator Installer on 2022-04-20 11:21:57.
 #The original can be found in archived file with the name .htaccess__[HASH]
 
-RewriteEngine On
-RewriteCond %{HTTP_HOST} mite.is
-RewriteRule (.*) https://mite.club/$1 [R=301,L]
 # BEGIN WordPress
 # Директивы (строки) между `BEGIN WordPress` и `END WordPress`
 # созданы автоматически и подлежат изменению только через фильтры WordPress.
@@ -19,6 +16,9 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+RewriteEngine On
+RewriteCond %{HTTP_HOST} mite.is
+RewriteRule (.*) https://mite.club/$1 [R=301,L]
 # BEGIN WP-Optimize Gzip compression
 <IfModule mod_filter.c>
 	<IfModule mod_deflate.c>
